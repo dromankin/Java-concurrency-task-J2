@@ -102,7 +102,6 @@ public class Main {
         }
 
         private void sortStepCustom() throws InterruptedException {
-            synchronized (myList) {
                 if (myList.size() < 2) {
                     return;
                 }
@@ -126,7 +125,7 @@ public class Main {
                 if (!swapped && running) {
                     Thread.sleep(delay);
                 }
-            }
+            
         }
 
         private void sortStepLibrary() throws InterruptedException {
